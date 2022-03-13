@@ -13,9 +13,9 @@ namespace KentBeckTDD
         {
             Dollar five = new Dollar(5);
             Dollar product = five.times(2);
-            Assert.AreEqual(10, five.amount);
+            Assert.AreEqual(10, product.amount);
             product = five.times(3);
-            Assert.AreEqual(15, five.amount);
+            Assert.AreEqual(15, product.amount);
         }
        
     }
@@ -25,9 +25,9 @@ namespace KentBeckTDD
         public Dollar(int amount) {
             this.amount = amount;
         }
-        public void times(int multiplier)
+        public Dollar times(int multiplier)
         {
-            amount *= multiplier;
+            return new Dollar (amount * multiplier);
         }
         
     }
