@@ -13,17 +13,19 @@ namespace KentBeckTDD
         {
             Dollar five = new Dollar(5);
             five.times(2);
-            Assert.Equals(10, five.amount);
+            Assert.AreEqual(10, five.amount);
         }
 
-        public class Dollar { 
-            public Dollar(int amount) { }
-            public void times(int multiplier)
-            {
+        
 
-            }
-            public int amount;
+    }
+    public class Dollar
+    {
+        public Dollar(int amount) { }
+        public void times(int multiplier)
+        {
+
         }
-
+        public int amount = 10;
     }
 }
