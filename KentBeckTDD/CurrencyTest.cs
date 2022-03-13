@@ -13,7 +13,9 @@ namespace KentBeckTDD
             assertEquals(10, five.amount);
         }
 
-        class Dollar { }
+        public class Dollar { 
+            public Dollar(int amount) { }
+        }
 
     }
 }
