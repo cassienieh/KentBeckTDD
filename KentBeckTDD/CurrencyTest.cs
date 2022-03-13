@@ -22,7 +22,7 @@ namespace KentBeckTDD
         public void testEquality()
         {
             Assert.IsTrue(new Dollar(5).equals(new Dollar(5)));
-            Assert.IsTrue(new Dollar(5).equals(new Dollar(6)));
+            Assert.IsFalse(new Dollar(5).equals(new Dollar(6)));
         }
        
     }
@@ -39,7 +39,8 @@ namespace KentBeckTDD
 
         public bool equals(Object obj)
         {
-            return true;
+            Dollar dollar = (Dollar)obj;
+            return amount == dollar.amount;
         }
         
     }
