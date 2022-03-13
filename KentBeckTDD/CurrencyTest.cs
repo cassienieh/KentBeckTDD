@@ -22,6 +22,7 @@ namespace KentBeckTDD
         public void testEquality()
         {
             Assert.IsTrue(new Dollar(5).equals(new Dollar(5)));
+            Assert.IsTrue(new Dollar(5).equals(new Dollar(6)));
         }
        
     }
