@@ -12,5 +12,8 @@ namespace KentBeckTDD
             five.times(2);
             assertEquals(10, five.amount);
         }
+
+        class Dollar { }
+
     }
 }
