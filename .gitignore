@@ -475,3 +475,16 @@ GitHub.sublime-settings
 !.vscode/launch.json 
 !.vscode/extensions.json 
 .history
+KentBeckTDD/bin/Debug/netcoreapp3.1/
+
+KentBeckTDD/obj/Debug/netcoreapp3.1/
+
+KentBeckTDD/obj/project.nuget.cache
+
+KentBeckTDD/obj/KentBeckTDD.csproj.nuget.dgspec.json
+
+KentBeckTDD/obj/KentBeckTDD.csproj.nuget.g.props
+
+KentBeckTDD/obj/KentBeckTDD.csproj.nuget.g.targets
+
+KentBeckTDD/obj/project.assets.json
