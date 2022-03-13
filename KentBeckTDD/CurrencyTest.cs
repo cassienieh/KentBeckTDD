@@ -15,17 +15,18 @@ namespace KentBeckTDD
             five.times(2);
             Assert.AreEqual(10, five.amount);
         }
-
-        
-
+       
     }
     public class Dollar
     {
-        public Dollar(int amount) { }
+        public int amount;
+        public Dollar(int amount) {
+            this.amount = amount;
+        }
         public void times(int multiplier)
         {
-
+            amount *= multiplier;
         }
-        public int amount = 10;
+        
     }
 }
