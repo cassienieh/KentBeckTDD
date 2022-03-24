@@ -18,6 +18,14 @@ namespace KentBeckTDD
         }
 
         [Test]
+        public void testFrancMultiplication()
+        {
+            Franc five = new Franc(5);
+            Assert.AreEqual(new Franc(10), five.times(2));
+            Assert.AreEqual(new Franc(15), five.times(3));
+        }
+
+        [Test]
         public void testEquality()
         {
             Assert.IsTrue(new Dollar(5).Equals(new Dollar(5)));
@@ -42,5 +50,25 @@ namespace KentBeckTDD
             return amount == dollar.amount;
         }
         
+    }
+
+    public class Franc
+    {
+        private int amount;
+        public Franc(int amount)
+        {
+            this.amount = amount;
+        }
+        public Franc times(int multiplier)
+        {
+            return new Franc(amount * multiplier);
+        }
+
+        public override bool Equals(Object obj)
+        {
+            Franc dollar = (Franc)obj;
+            return amount == dollar.amount;
+        }
+
     }
 }
