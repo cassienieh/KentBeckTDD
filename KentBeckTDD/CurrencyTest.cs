@@ -32,43 +32,5 @@ namespace KentBeckTDD
             Assert.IsFalse(new Dollar(5).Equals(new Dollar(6)));
         }
        
-    }
-    public class Dollar
-    {
-        private int amount;
-        public Dollar(int amount) {
-            this.amount = amount;
-        }
-        public Dollar times(int multiplier)
-        {
-            return new Dollar (amount * multiplier);
-        }
-
-        public override bool Equals(Object obj)
-        {
-            Dollar dollar = (Dollar)obj;
-            return amount == dollar.amount;
-        }
-        
-    }
-
-    public class Franc
-    {
-        private int amount;
-        public Franc(int amount)
-        {
-            this.amount = amount;
-        }
-        public Franc times(int multiplier)
-        {
-            return new Franc(amount * multiplier);
-        }
-
-        public override bool Equals(Object obj)
-        {
-            Franc dollar = (Franc)obj;
-            return amount == dollar.amount;
-        }
-
-    }
+    } 
 }
