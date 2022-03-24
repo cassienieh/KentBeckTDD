@@ -8,23 +8,27 @@ namespace KentBeckTDD
     {
         public Dollar(int amount)
         {
-            this.amount = amount;
+            Amount = amount;
         }
         public Dollar times(int multiplier)
         {
-            return new Dollar(amount * multiplier);
+            return new Dollar(Amount * multiplier);
         }
 
         public override bool Equals(Object obj)
         {
-            Dollar dollar = (Dollar)obj;
-            return amount == dollar.amount;
+            Money money = (Money)obj;
+            return Amount == money.GetAmount();
         }
 
     }
 
     public class Money
     {
-        protected int amount;
+        protected int Amount;
+        public int GetAmount()
+        {
+            return Amount;
+        }
     }
 }
