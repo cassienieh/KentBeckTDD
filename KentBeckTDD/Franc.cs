@@ -14,12 +14,5 @@ namespace KentBeckTDD
         {
             return new Franc(Amount * multiplier);
         }
-
-        public override bool Equals(Object obj)
-        {
-            Money money = (Money)obj;
-            return Amount == money.GetAmount();
-        }
-
     }
 }
