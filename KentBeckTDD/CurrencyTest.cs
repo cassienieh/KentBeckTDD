@@ -13,8 +13,8 @@ namespace KentBeckTDD
         public void testMultiplicstion()
         {
             Dollar five = new Dollar(5);
-            new Dollar(10).Should().BeEquivalentTo(five.times(2));
-            new Dollar(15).Should().BeEquivalentTo(five.times(3));
+            Assert.AreEqual(new Dollar(10), five.times(2));
+            Assert.AreEqual(new Dollar(15), five.times(3));
         }
 
         [Test]
