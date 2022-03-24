@@ -4,9 +4,8 @@ using System.Text;
 
 namespace KentBeckTDD
 {
-    public class Dollar
+    public class Dollar : Money
     {
-        private int amount;
         public Dollar(int amount)
         {
             this.amount = amount;
@@ -22,5 +21,10 @@ namespace KentBeckTDD
             return amount == dollar.amount;
         }
 
+    }
+
+    public class Money
+    {
+        protected int amount;
     }
 }
