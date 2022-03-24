@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using FluentAssertions;
 using NUnit.Framework;
 
 namespace KentBeckTDD
@@ -12,10 +13,8 @@ namespace KentBeckTDD
         public void testMultiplicstion()
         {
             Dollar five = new Dollar(5);
-            Dollar product = five.times(2);
-            Assert.AreEqual(new Dollar(10), product);
-            product = five.times(3);
-            Assert.AreEqual(new Dollar(15), product);
+            new Dollar(10).Should().BeEquivalentTo(five.times(2));
+            new Dollar(15).Should().BeEquivalentTo(five.times(3));
         }
 
         [Test]
