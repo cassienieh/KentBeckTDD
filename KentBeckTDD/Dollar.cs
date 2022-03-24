@@ -13,14 +13,7 @@ namespace KentBeckTDD
         public Dollar times(int multiplier)
         {
             return new Dollar(Amount * multiplier);
-        }
-
-        public override bool Equals(Object obj)
-        {
-            Money money = (Money)obj;
-            return Amount == money.GetAmount();
-        }
-
+        }    
     }
 
     public class Money
@@ -29,6 +22,12 @@ namespace KentBeckTDD
         public int GetAmount()
         {
             return Amount;
+        }
+
+        public override bool Equals(Object obj)
+        {
+            Money money = (Money)obj;
+            return Amount == money.GetAmount();
         }
     }
 }
