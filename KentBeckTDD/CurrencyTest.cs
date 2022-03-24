@@ -10,7 +10,7 @@ namespace KentBeckTDD
     public class CurrencyTest
     {
         [Test]
-        public void testMultiplicstion()
+        public void testMultiplication()
         {
             Dollar five = new Dollar(5);
             Assert.AreEqual(new Dollar(10), five.times(2));
@@ -20,8 +20,8 @@ namespace KentBeckTDD
         [Test]
         public void testEquality()
         {
-            Assert.IsTrue(new Dollar(5).equals(new Dollar(5)));
-            Assert.IsFalse(new Dollar(5).equals(new Dollar(6)));
+            Assert.IsTrue(new Dollar(5).Equals(new Dollar(5)));
+            Assert.IsFalse(new Dollar(5).Equals(new Dollar(6)));
         }
        
     }
@@ -36,7 +36,7 @@ namespace KentBeckTDD
             return new Dollar (amount * multiplier);
         }
 
-        public bool equals(Object obj)
+        public override bool Equals(Object obj)
         {
             Dollar dollar = (Dollar)obj;
             return amount == dollar.amount;
